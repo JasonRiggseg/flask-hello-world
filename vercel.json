@@ -1,5 +1,18 @@
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
-  ]
-}
+
+
+  {
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/analyze.js",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/analyze",
+        "dest": "/api/analyze.js"
+      }
+    ]
+  }
+  
